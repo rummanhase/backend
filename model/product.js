@@ -2,9 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 productSchema = new Schema( {
-	item_id:String,
 	user_id: Schema.ObjectId,
-	is_delete: { type: Boolean, default: false }
+	cart:Array,
+	order_Succes:Array,
+	order_history:Array
 }),
 product = mongoose.model('product', productSchema);
 
